@@ -42,7 +42,7 @@
   &__toggler:checked ~ &__menu {
     transform: translateY(calc((75px * 0.5 + #{$pagePaddingY}) * -1))
       translateX(calc(100vw - #{$pagePaddingX} - 4px));
-    background-color: #0075ff;
+    background-color: $c-blue;
     @include media {
       transform: translateY(calc((45px * 0.5 + #{$pagePaddingY}) * -1))
         translateX(calc(100vw - #{$mobPagePaddingX} - 3px));
