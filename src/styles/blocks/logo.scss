@@ -1,0 +1,13 @@
+.logo {
+  width: 130px;
+  height: 75px;
+
+  &--size--forFooter {
+    width: 115px;
+  }
+
+  @include media {
+    width: 78px;
+    height: 45px;
+  }
+}

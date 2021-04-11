@@ -1,0 +1,77 @@
+.header {
+  position: relative;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px;
+    @include media {
+      padding: 0 3px;
+    }
+  }
+
+  &__logo {
+    margin-left: $iconSize;
+  }
+
+  &__linkTel {
+    position: relative;
+    width: $iconSize;
+    height: $iconSize;
+    background-image: url(/images/Icon-Phone-call.png);
+    background-size: cover;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-decoration: none;
+    @include media {
+      width: $mobIconSize;
+      height: $mobIconSize;
+    }
+
+    &::before {
+      content: "+1 234 555-55-55";
+      position: absolute;
+      left: -130px;
+      top: 20%;
+      opacity: 0;
+      @include hover(opacity, 1);
+      transition: opacity 0.4s;
+      @include media {
+        top: 150%;
+      }
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 80px;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 80px;
+    color: #fff;
+    @include media {
+      font-size: 46px;
+      line-height: 40px;
+      letter-spacing: -1px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      display: block;
+      width: 40px;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 2px;
+    }
+  }
+}

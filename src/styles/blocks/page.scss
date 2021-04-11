@@ -1,0 +1,33 @@
+.page {
+  background: $c-gray;
+  font-family: "Roboto", sans-serif;
+
+  &__header {
+    padding: $pagePaddingY $pagePaddingX;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/header1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include media {
+      padding: $pagePaddingY $mobPagePaddingX;
+    }
+  }
+
+  &__footer {
+    width: 100vw;
+    height: 360px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url(../images/footer.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include media {
+      padding-bottom: $pagePaddingY;
+    }
+  }
+}
