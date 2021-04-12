@@ -5,7 +5,6 @@
 
   &__header {
     padding: $pagePaddingY $pagePaddingX;
-    // width: 100vw;
     height: 100vh;
     background-image: url(../images/header1.png);
     background-position: center;
@@ -17,7 +16,6 @@
   }
 
   &__content {
-    // width: 100vw;
     padding: 104px 120px 72px;
     @include media {
       padding: 64px 20px;
@@ -25,7 +23,6 @@
   }
 
   &__footer {
-    // width: 100vw;
     height: 360px;
     padding-bottom: 40px;
     display: flex;

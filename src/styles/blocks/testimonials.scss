@@ -1,0 +1,61 @@
+.testimonials {
+
+  &__content {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    @include media {
+      padding-top: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  &__card {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media {
+      width: 280px;
+      margin-bottom: 48px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__photo {
+    margin-bottom: 28px;
+    width: 153px;
+    height: 153px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: $c-blue;
+  }
+
+  &__work {
+    margin-bottom: 13px;
+    font-size: 14px;
+    line-height: 27px;
+    text-align: center;
+    color: #9fadc2;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    color: #3e3e3e;
+  }
+}
