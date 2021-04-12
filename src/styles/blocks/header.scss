@@ -1,18 +1,52 @@
 .header {
   position: relative;
 
+  &__toggler {
+    display: none;
+  }
+
+  &__wrapper {
+    max-width: $maxContentWidth;
+    margin: 0 auto;
+    padding: $headerPaddingY $pagePaddingX;
+    @include media-S {
+      padding: $headerPaddingY $mobPagePaddingX;
+    }
+  }
+
   &__container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 4px;
-    @include media {
+    @include media-S {
       padding: 0 3px;
     }
   }
 
+  &__togglerLabel {
+    position: relative;
+    z-index: 2;
+    width: $iconSize;
+    height: $iconSize;
+    cursor: pointer;
+    background-image: url(/images/Icon-Burger-menu.png);
+    background-size: cover;
+    @include hover(background-image, url(/images/Icon-Burger-menu-hover.png));
+    @include media-S {
+      width: $mobIconSize;
+      height: $mobIconSize;
+    }
+  }
+
+  &__toggler:checked + &__wrapper > &__container > &__togglerLabel {
+    background-image: url(/images/Icon-Close.png);
+  }
+
   &__logo {
-    margin-left: $iconSize;
+    position: relative;
+    z-index: 2;
   }
 
   &__linkTel {
@@ -25,9 +59,9 @@
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 2px;
-    color: #fff;
+    color: $c-white;
     text-decoration: none;
-    @include media {
+    @include media-S {
       width: $mobIconSize;
       height: $mobIconSize;
     }
@@ -39,8 +73,7 @@
       top: 20%;
       opacity: 0;
       @include hover(opacity, 1);
-      transition: opacity 0.4s;
-      @include media {
+      @include media-S {
         top: 150%;
       }
     }
@@ -56,8 +89,8 @@
     font-weight: bold;
     font-size: 80px;
     line-height: 80px;
-    color: #fff;
-    @include media {
+    color: $c-white;
+    @include media-S {
       font-size: 46px;
       line-height: 40px;
       letter-spacing: -1px;
@@ -70,8 +103,23 @@
       display: block;
       width: 40px;
       height: 2px;
-      background-color: #fff;
+      background-color: $c-white;
       border-radius: 2px;
     }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: $c-blue;
+    z-index: 1;
+    transition: transform 1s, background-color 0.5s;
+  }
+
+  &__toggler:checked ~ &__nav {
+    transform: translateX(100vw);
   }
 }

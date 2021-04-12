@@ -1,7 +1,7 @@
-.aboutUs {
+.about-us {
   display: flex;
   justify-content: space-between;
-  @include media {
+  @include media-S {
     flex-direction: column;
   }
 
@@ -9,7 +9,7 @@
     display: inline-block;
     margin-bottom: 48px;
     @extend %font-48;
-    @include media {
+    @include media-S {
       font-size: 36px;
       line-height: 36px;
     }
@@ -22,7 +22,7 @@
 
   &__content {
     width: 500px;
-    @include media {
+    @include media-S {
       width: 100%;
     }
   }
@@ -30,7 +30,7 @@
   &__paragraph {
     margin-bottom: 16px;
     @extend %font-16;
-    color: #3e3e3e;
+    color: $c-dark;
 
     &:first-child {
       font-weight: bold;

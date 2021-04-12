@@ -1,4 +1,4 @@
-.sectionTitle {
+.section-title {
   position: relative;
   width: 326px;
   margin: 150px auto 60px;
@@ -16,7 +16,7 @@
     background-image: url(../images/Icon-Corona-virus.png);
   }
 
-  @include media {
+  @include media-S {
     margin: 64px auto 53px;
     font-size: 36px;
     line-height: 36px;

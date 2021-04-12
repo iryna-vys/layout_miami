@@ -4,36 +4,19 @@
   width: 100vw;
 
   &__header {
-    padding: $pagePaddingY $pagePaddingX;
     height: 100vh;
     background-image: url(../images/header1.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    @include media {
-      padding: $pagePaddingY $mobPagePaddingX;
-    }
   }
 
   &__content {
-    padding: 104px 120px 72px;
-    @include media {
-      padding: 64px 20px;
-    }
-  }
-
-  &__footer {
-    height: 360px;
-    padding-bottom: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background-image: url(../images/footer.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    @include media {
-      padding-bottom: $pagePaddingY;
+    max-width: $maxContentWidth;
+    margin: 0 auto;
+    padding: 104px $pagePaddingX 72px;
+    @include media-S {
+      padding: 64px $mobPagePaddingX;
     }
   }
 }
