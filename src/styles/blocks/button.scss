@@ -1,14 +1,20 @@
 .button {
   display: block;
+  cursor: pointer;
+  padding: 0;
   height: 56px;
   border: 2px solid $c-blue;
   border-radius: 8px;
   font-weight: bold;
   font-size: 16px;
-  line-height: 56px;
+  line-height: 52px;
   text-align: center;
-  @include hover(background-color, #005ecc);
-  @include hover(box-shadow, 0 13px 27px rgba(0, 83, 181, 0.46));
+  transition: 0.4s;
+
+  &:hover {
+    background-color: #005ecc;
+    box-shadow: 0 13px 27px rgba(0, 83, 181, 0.46);
+  }
 
   &--primary {
     color: $c-white;
@@ -18,6 +24,9 @@
 
   &--secondary {
     color: $c-blue;
-    @include hover(color, $c-white);
+
+    &:hover {
+      color: $c-white;
+    }
   }
 }

@@ -72,7 +72,7 @@
       left: -130px;
       top: 20%;
       opacity: 0;
-      @include hover(opacity, 1);
+      transition: opacity 0.4s;
       @include media-S {
         top: 150%;
       }

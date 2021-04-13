@@ -3,7 +3,7 @@
   &__menu {
     max-width: $maxContentWidth;
     margin: 0 auto;
-    padding: 152px 120px;
+    padding: 150px 120px;
     @include media-S {
       padding: 120px 20px 52px;
     }
@@ -18,7 +18,7 @@
 
   &__item {
     display: block;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 
   &__link {
